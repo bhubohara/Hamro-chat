@@ -1,3 +1,4 @@
+ //dommy data
  const chats = [
     {
       isGroupChat: false,
@@ -107,5 +108,5 @@
     },
   ];
 
-  
+
 module.exports = chats;
