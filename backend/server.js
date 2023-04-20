@@ -2,10 +2,15 @@ const express = require('express');
 
 const dotenv=require("dotenv");
 const chats = require("./data/data");
+const DbConnection = require('./Configuration/DbConnection');
+
+
 
 
 const app = express();
 dotenv.config();
+
+DbConnection();
 
 
 
@@ -28,6 +33,6 @@ app.get("/api/chat/:id",(req,res)=>{
 
 const PORT = process.env.PORT ||8000
 
-app.listen(8000, console.log(`server is running on ${PORT} ` ));
+app.listen(8000, console.log(`server is running on ${PORT}`));
 
 // change
